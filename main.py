@@ -17,7 +17,7 @@ import plotly.express as px
 from playwright.sync_api import sync_playwright
 # Adjust decay weight for "last month" to be treated as 30 days old
 # Load symbols
-with open(r"C:\Users\Daziel Brilliant\Desktop\CV builder\Sentiment news yahoo\allsymbols.txt", "r") as f:
+with open("allsymbols.txt", "r") as f:
     symbols = [line.strip() for line in f if line.strip()]
 
 def estimate_days_ago(time_str):

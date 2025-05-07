@@ -71,11 +71,7 @@ vaderSentiment
 2. The app opens the related Yahoo Finance News page in a headless browser via **Playwright**.
 3. News articles (title, quote, time) are extracted dynamically.
 4. Each article is analyzed by **VADER** to determine polarity.
-5. Sentiment weights are applied using:
-
-   $$
-   \text{weight} = e^{-\lambda \cdot \text{days\_old}},\ \lambda = 0.05
-   $$
+5. Sentiment weights are applied using Exponential Decay Weighting.
 6. Results are shown in a table and a bar chart.
 7. Users can download a `.csv` of the analysis.
 
@@ -101,7 +97,3 @@ streamlit run main.py
 ## 📄 License
 
 MIT License. Feel free to fork and modify.
-
----
-
-Would you like me to generate a `requirements.txt` file automatically for you too?
